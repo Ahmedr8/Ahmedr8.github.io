@@ -8,9 +8,7 @@ body{
     list-style: none;
   }
   
-  .disp{
-    display: none;
-  }
+
   
   /* Styling for the loading circle */
   .loading-container {
