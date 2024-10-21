@@ -56,10 +56,6 @@ body{
   .navbar-toggler {
     border-color:#0a192f  /* Change to your desired border color */
   }
-  .navbar-toggler-icon {
-    background-image: url('/public/list.svg');
-    background-repeat: no-repeat;
-  }
   
   .navbar-toggler:focus {
    box-shadow: none;
@@ -181,7 +177,6 @@ body{
       display: flex;
       justify-content: center;
       width: 100%;
-        position: fixed;
         bottom: 0px;
     }
     .ul-footer{
@@ -254,3 +249,11 @@ body{
     }
   }
   
+  .profile-circle {
+    width: 120px; /* Adjust this to minimize the circle */
+    height: 120px; /* Adjust this to minimize the circle */
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Ensures that the image doesn't overflow the circle */
+    margin-right: 20px; /* Space between the image and the text */
+    float: left;
+}
