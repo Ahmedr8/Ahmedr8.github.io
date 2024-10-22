@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Ahmed Amine Welhazi</title>
     <link rel="stylesheet" href="App.css">
+    <script src="dynamic.js"></script>
     <style>
         .hero {
             background-image: url('bg.jpg'); /* Update with your image */
@@ -102,85 +103,165 @@
         <!-- Main Content Sections -->
         <div class="container mt-5">
             <!-- About Me Section -->
-            <section id="about" class="mb-5">
-                <h2>About Me</h2>
-                <div class="align-items-center">
-                    <div class="profile-circle">
-                        <img src="cv_image.jpg" alt="Ahmed Amine Welhazi" class="img-fluid" style="width: 150px; height: 150px;">
+            <section id="about" class="about-section">
+                <div class="container">
+                  <div class="row">
+                    <!-- Left Side: Image -->
+                    <div class="about-image col-lg-6">
+                      <img src="img3.png" alt="About Me" class="img-fluid">
                     </div>
-                    <p>
-                        I am Ahmed Amine Welhazi, a passionate software engineer with experience in backend development.
-                        I specialize in building scalable applications using technologies such as Java, Spring Boot, Node.js, and Docker.
-                    </p>
+                    
+                    <!-- Right Side: Text Content -->
+                    <div class="about-content col-lg-6">
+                      <h2>About Me</h2>
+                      <p class="line-1">Hello, I'm Ahmed Amine Welhazi, a passionate software developer.</p>
+                      <p class="line-2">I specialize in backend development with a focus on optimization and efficiency.</p>
+                      <p class="line-3">My journey includes working with various technologies like Java, Spring Boot, Python, and Node.js.</p>
+                      <p class="line-4">I love solving complex problems and delivering efficient solutions for clients.</p>
+                      <p class="line-5">Let’s build something amazing together!</p>
+                    </div>
+                  </div>
                 </div>
-            </section>
+              </section>
+              
 
             <!-- Skills Section -->
-            <section id="skills" class="mb-5">
-                <h2>Skills</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Languages: Java, JavaScript, TypeScript, Python</li>
-                    <li class="list-group-item">Frameworks: Node.js, Express.js, React, Django, Angular</li>
-                    <li class="list-group-item">Databases: MySQL, SQL Server, PostgreSQL, MongoDB</li>
-                    <li class="list-group-item">Tools: Docker, Git, Jira</li>
-                    <li class="list-group-item">Architecture: Domain-driven design, Microservices, UML, BPMN</li>
-                </ul>
-            </section>
+            <section id="skills" class="section container mt-5">
+                <h2 class="section-title">Skills</h2>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="skill-card">
+                      <div class="icon">
+                        <i class="fas fa-code"></i>
+                      </div>
+                      <h4>Backend Development</h4>
+                      <p>Expertise in Java, Spring Boot, Node.js, and Python with a focus on efficient API and database integration.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="skill-card">
+                      <div class="icon">
+                        <i class="fas fa-database"></i>
+                      </div>
+                      <h4>Database Management</h4>
+                      <p>Experienced with MySQL, PostgreSQL, MongoDB, and optimized query handling for large datasets.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="skill-card">
+                      <div class="icon">
+                        <i class="fas fa-cloud"></i>
+                      </div>
+                      <h4>Cloud & DevOps</h4>
+                      <p>Proficient in cloud services (AWS, Azure) and tools like Docker and Kubernetes for deployment automation.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
 
             <!-- Experience Section -->
-            <section id="experience" class="mb-5">
-                <h2>Experience</h2>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Software Engineer (Part Time) - AETOS</h5>
-                        <p class="card-text">March 2024 - Present</p>
-                        <p class="card-text">Worked on enhancing stock distribution processes, optimizing balancing algorithms, and deploying the application on an IIS server.</p>
+            <section id="experience" class="section container mt-5">
+                <h2 class="section-title">Experience</h2>
+                <div class="row">
+                  <!-- Experience 1 -->
+                  <div class="col-md-4">
+                    <div class="experience-card">
+                      <img src="path-to-your-image1.jpg" alt="Experience Image" class="experience-image">
+                      <div class="experience-info">
+                        <h4>Software Developer at Company A</h4>
+                        <p>Feb 2023 - Present</p>
+                        <p>Developed backend solutions using Java and Spring Boot, optimizing API performance and database interactions.</p>
+                      </div>
                     </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Stock Optimization Application Intern - AETOS</h5>
-                        <p class="card-text">June 2023 - August 2023</p>
-                        <p class="card-text">Designed a stock balancing solution, optimized data imports by 50%, and implemented an inter-establishment balancing algorithm.</p>
+                  </div>
+                  <!-- Experience 2 -->
+                  <div class="col-md-4">
+                    <div class="experience-card">
+                      <img src="path-to-your-image2.jpg" alt="Experience Image" class="experience-image">
+                      <div class="experience-info">
+                        <h4>Backend Developer Intern at Company B</h4>
+                        <p>July 2022 - Jan 2023</p>
+                        <p>Implemented stock balancing algorithms and optimized large data imports, improving system performance by 50%.</p>
+                      </div>
                     </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Incident & Archive Management Intern - STEG</h5>
-                        <p class="card-text">Feb 2022 - Sept 2022</p>
-                        <p class="card-text">Developed an application to manage incidents and archives, reducing report creation time and improving data visualization.</p>
+                  </div>
+                  <!-- Experience 3 -->
+                  <div class="col-md-4">
+                    <div class="experience-card">
+                      <img src="path-to-your-image3.jpg" alt="Experience Image" class="experience-image">
+                      <div class="experience-info">
+                        <h4>Freelance Developer</h4>
+                        <p>Jan 2021 - June 2022</p>
+                        <p>Worked on multiple web development projects, creating solutions using React.js, Node.js, and database optimizations.</p>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
+              </section>
+              
 
             <!-- Projects Section -->
-            <section id="projects" class="mb-5">
-                <h2>Projects</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <strong>Mini Compiler</strong> - Created a simplified compiler and integrated GPT-2 API for error correction.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>E-Commerce Platform</strong> - Implemented object detection and integrated Google Maps API for store locations.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Parental Control Android App</strong> - Developed an app for limiting YouTube usage, with Firebase authentication.
-                    </li>
-                </ul>
-            </section>
+            <section id="projects" class="section container mt-5">
+                <h2 class="section-title">Projects</h2>
+                <div class="row">
+                  <!-- Project 1 -->
+                  <div class="col-md-4">
+                    <div class="project-card">
+                      <img src="path-to-your-project-image1.jpg" alt="Project Image" class="project-image">
+                      <div class="project-info">
+                        <h4>E-commerce Platform</h4>
+                        <p>Developed an online store with integrated object detection for price labeling and Google Maps API for store locations.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 2 -->
+                  <div class="col-md-4">
+                    <div class="project-card">
+                      <img src="path-to-your-project-image2.jpg" alt="Project Image" class="project-image">
+                      <div class="project-info">
+                        <h4>Stock Management System</h4>
+                        <p>Implemented a stock balancing algorithm and optimized CSV import performance by 50%, reducing overstock and shortages.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Project 3 -->
+                  <div class="col-md-4">
+                    <div class="project-card">
+                      <img src="path-to-your-project-image3.jpg" alt="Project Image" class="project-image">
+                      <div class="project-info">
+                        <h4>Parental Control App</h4>
+                        <p>Developed an Android app to limit YouTube usage with Firebase authentication and background service enforcement.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
 
             <!-- Education Section -->
-            <section id="education" class="mb-5">
-                <h2>Education</h2>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Bachelor's Degree in Computer Science</h5>
-                        <p class="card-text">Institut Supérieur d'Informatique (ISI), Ariana, Tunisia | Graduated: June 2022</p>
-                    </div>
+            <section id="education" class="section container mt-5">
+                <h2 class="section-title">Education</h2>
+                <div class="education-list">
+                  <div class="education-item">
+                    <h4>Master's in Software Engineering</h4>
+                    <p class="education-institution">Institut Supérieur d'Informatique, Ariana</p>
+                    <span class="education-year">2022 - 2025</span>
+                    <p class="education-description">Studied advanced topics in software development, including backend systems, algorithms, and design patterns. Graduating with a thesis in the field of software development engineering.</p>
+                  </div>
+              
+                  <div class="education-item">
+                    <h4>Bachelor's in Computer Science</h4>
+                    <p class="education-institution">Université de Tunis El Manar</p>
+                    <span class="education-year">2018 - 2022</span>
+                    <p class="education-description">Gained solid foundations in programming, database management, and systems development. Participated in projects related to network security and machine learning.</p>
+                  </div>
                 </div>
-            </section>
+              </section>
+              
         </div>
     </div>
+    <!-- footer nav -->
     <div class="footer-nav">
         <ul class="ul-footer">
             <li><a href="https://www.linkedin.com/in/ahmed-welhazi-65659b217/" target="_blank"><i class="bi bi-linkedin"></i> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -190,7 +271,8 @@
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
               </svg></a></li>
             </ul> 
-        </div>
+    </div>
+    <!-- footer -->
     <footer class="bg-dark text-white text-center py-3">
         <p>© 2024 Ahmed Amine Welhazi | All Rights Reserved</p>
     </footer>

@@ -1,132 +1,198 @@
-body{
-    background-color: #0a192f;
-    color: #8892b0;
-    font-size: medium;
-    margin: 5px;
-  }
-  .ul{
-    list-style: none;
-  }
-  
-  
-  /* Styling for the loading circle */
-  .loading-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+body {
+  background-color: #0a192f;
+  color: #8892b0;
+  font-size: medium;
+  margin: 5px;
+}
+
+.ul {
+  list-style: none;
+}
+
+.navbar-toggler {
+  border-color: #0a192f;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  border-color: #64ffda;
+}
+
+.navb {
+  background-color: rgba(10, 25, 47, 0.85);
+  height: 100px;
+}
+
+.ulnav {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  font-family: sans-serif;
+}
+
+.ulnav li a:focus {
+  color: white;
+}
+
+.circle {
+  background-color: #0a192f;
+  border-radius: 50%;
+  border: solid 3px #64ffda;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.9);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #64ffda;
+  border: 2px solid #64ffda;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translate(-5px, -5px);
+  color: white;
+  box-shadow: 5px 5px 15px #64ffda;
+}
+
+.side-nav {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .footer-nav {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999; /* Ensure it's on top of other content */
+    bottom: 0;
   }
-  .loading-circle {
-    
-    width: 100px; /* Set the desired width for the circle */
-    height: 100px; /* Set the desired height for the circle */
-    border: none; /* Initially, no border */
-    border-radius: 50%; /* Make it a circle */
-    animation: createCircle 2s infinite linear; /* Apply the circle creation animation */
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #64ffda;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skill-card,
+.experience-card,
+.project-card {
+  background-color: #0a192f;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #112240;
+  box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.3);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover,
+.experience-card:hover,
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px -10px rgba(100, 255, 218, 0.7);
+}
+
+.skill-card .icon,
+.project-info h4,
+.experience-info h4 {
+  font-size: 1.5rem;
+  color: #64ffda;
+}
+
+.project-info p,
+.experience-info p,
+.skill-card p {
+  font-size: 0.95rem;
+  color: #8892b0;
+}
+
+/* education item */
+.education-item {
+  position: relative;
+  padding-left: 30px; /* Space for the circle on the left */
+}
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #64ffda;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .skill-card,
+  .experience-card,
+  .project-card {
+    margin-bottom: 30px;
   }
-  
-  @keyframes createCircle {
-    0% {
-        transform: rotate(0deg);
-        border-top: 5px solid #64ffda;
-    }
-    25% {
-        transform: rotate(90deg);
-        border-right: 5px solid #64ffda;
-    }
-    50% {
-        transform: rotate(180deg);
-        border-bottom: 5px solid #64ffda;
-    }
-    75% {
-        transform: rotate(270deg);
-        border-left: 5px solid #64ffda;
-    }
-    100% {
-        transform: rotate(360deg);
-        border-top: 5px solid #64ffda;
-    }
-  }
-  
-  .navbar-toggler {
-    border-color:#0a192f  /* Change to your desired border color */
-  }
-  
-  .navbar-toggler:focus {
-   box-shadow: none;
-   border-color: #64ffda
-  
-  }
-  
-  
-  
-  .navb{
-    background-color: rgba(10, 25, 47, 0.85);
-    height: 100px;
-  }
-  
-  .ulnav{
-      display: flex;
-      justify-content: space-between;
-      column-gap: 20px;
-      font-family: sans-serif;
-  }
-  
-  .ulnav li a:focus{
-    color: white;
-  }
-  
-  .circle {
-   /* Should be the same as width to create a perfect circle */
-    background-color: #0a192f; /* Circle background color */
-    border-radius: 50%; /* Creates a circle */
-    border: solid 3px #64ffda;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Clip content that goes beyond the circle */
-  }
-  
-  .logo-img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    transform: scale(1.5);
-    transition: transform 0.3s ease; 
-  }
-  
-  .logo-img:hover {
-    transition: transform 0.3s ease;
-    transform: scale(1.9);
-  }
-  
-  /* Basic button styling */
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: transparent; 
-    color: #64ffda; /* Button text color */
-    text-decoration: none; /* Remove underline from the link */
-    border: 2px solid #64ffda;
-    transition: transform 0.3s ease; /* Add a transition effect to the transform property */
-    border-radius: 5px; /* Add rounded corners */
-  }
-  
-  /* Style when hovered */
-  .btn:hover {
-    transform: translate(-5px, -5px); /* Move the button up and to the left */
-    box-shadow: 5px 5px 15px #64ffda; /* Add a box shadow for depth */
-    color: #64ffda;
-    border: 2px solid #64ffda;
-  }
-  
-  /* side navigation */
+}
+
+/* footer nav */
+.footer-nav{
+  display: none;
+ }
+@media (max-width: 768px) { 
   .side-nav{
+    display: none;
+  }
+.footer-nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+    bottom: 0px;
+}
+.ul-footer{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+.ul-footer li a{
+  padding: 10px;
+  display: inline-block;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.ul-footer li a:hover{
+  transform: translate(-5px);
+  color: #64ffda;
+}
+ /* top nav bar adjust height */
+.navb{
+  height: auto;
+}
+}
+
+/* side navigation */
+.side-nav{
   position:fixed;
   bottom: 0px;
   left: 20px;
@@ -163,92 +229,8 @@ body{
     margin: 0px auto;
     background-color: white;
   }
-   /* footer navigation */
-   .footer-nav{
-    display: none;
-   }
-  /*side navigation responsiness */
-  @media (max-width: 768px) { 
-    .side-nav{
-      display: none;
-    }
-     /* footer navigation */
-     .footer-nav{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-        bottom: 0px;
-    }
-    .ul-footer{
-      display: flex;
-      list-style: none;
-      justify-content: space-between;
-      column-gap: 20px;
-      align-items: center;
-      margin-bottom: 20px;
-      padding: 0px;
-    }
-    .ul-footer li a{
-      padding: 10px;
-      display: inline-block;
-      color: inherit;
-      transition: transform 0.3s ease;
-    }
-    
-    .ul-footer li a:hover{
-      transform: translate(-5px);
-      color: #64ffda;
-    }
-     /* top nav bar adjust height */
-    .navb{
-      height: auto;
-    }
-   }
-  
-  
-  
-  
-  
 
-.App {
-    text-align: center;
-  }
-  
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
+  /* ABOUT ME */
   .profile-circle {
     width: 120px; /* Adjust this to minimize the circle */
     height: 120px; /* Adjust this to minimize the circle */
@@ -256,4 +238,59 @@ body{
     overflow: hidden; /* Ensures that the image doesn't overflow the circle */
     margin-right: 20px; /* Space between the image and the text */
     float: left;
+}
+
+/* About Section Styling */
+.about-section {
+  padding: 100px 0; /* Adjust the padding to your preference */
+  background-color: #0a192f;
+  color: #ccd6f6;
+}
+
+.about-image {
+  text-align: center; /* Center the image */
+}
+
+.about-image img {
+  max-width: 100%; /* Ensure the image is responsive */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.3); /* Similar shadow as the cards */
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically align text */
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #64ffda; /* Accent color */
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  opacity: 0; /* Initially hidden for animation */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  line-height: 1.7;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* smouth scrolling */
+.section {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Slightly move down */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Back to original position */
 }
